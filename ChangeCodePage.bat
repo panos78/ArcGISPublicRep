@@ -1,4 +1,5 @@
 @ECHO OFF
+chcp 65001 >NUL
 TITLE Change Codepage for ArcGIS
 :: --------------------------------------------------------------
 ::  ChangeCodePage.bat
