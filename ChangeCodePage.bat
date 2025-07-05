@@ -9,11 +9,11 @@ TITLE Change Codepage for ArcGIS
 ::  Copyright 2025 - Dr. Panagiotis E. Papazoglou
 ::  Use it at your own risk.
 :: --------------------------------------------------------------
-::  ������餜� �� �矣��� dbfDefault (��������垩� Shapefiles)
-::  ��� ArcGIS Desktop 10.x � / ��� ArcGIS Pro
+::  Ενημερώνει τη ρύθμιση dbfDefault (Κωδικοποίηση Shapefiles)
+::  για ArcGIS Desktop 10.x ή / και ArcGIS Pro
 :: --------------------------------------------------------------
-::  ���������� �����飘�� 2025 - ��. ������髞� �. ���ᝦ���� 
-::  ����������㩫� �� �� ���� ��� ���礞.
+::  Πνευματικά Δικαιώματα 2025 - Δρ. Παναγιώτης Ε. Παπάζογλου 
+::  Χρησιμοποιήστε το με δική σας ευθύνη.
 :: --------------------------------------------------------------
 SETLOCAL EnableDelayedExpansion
 FOR /F "tokens=3" %%L IN (
@@ -25,59 +25,59 @@ IF /I "%LOC:~0,2%"=="el" (
 	SET "LANGMODE=EN"
 )
 IF "%LANGMODE%"=="GR" (
-	SET "MSG_TITLE1=   ������ ����������⤞� ��������垩�� ��� �� Shapefiles"
-	SET "MSG_TITLE2=        ��� ArcGIS Desktop 10.x � / ��� ArcGIS Pro"
-	SET "MSG_APPSEL_TITLE= ����⥫� �������� ��� ��� ���� �� �������� � ��������垩�"
-	SET "MSG_APPSEL_OPT="
-	SET "MSG_APPSEL_EXIT=륦���"
-	SET "MSG_APPSEL_INPUT=����������㩫� 1, 2, 3 � 4: "
-	SET "MSG_CPTITLE=          �������� ArcGIS Desktop ��� ArcGIS Pro"
-	SET "MSG_CPTITLE1=                   �������� ArcGIS %%TARGET%%"
-	SET "MSG_CPSEL_TITLE=����⥫� ��������垩�:"
-	SET "MSG_CPSEL_TITLE2=    ����������㩫� ��� ������ ������� ��� ���㩫� ENTER"
-	SET "CPDESC1= 1)  437 - �.�.�. (DOS)                25)   1252 - ������ ���駞� (Windows)"
-	SET "CPDESC2= 2)  708 - ������� (ASMO 708)          26)   1253 - �������� (Windows ANSI)"
-	SET "CPDESC3= 3)  720 - ������� (������� ASMO)      27)   1254 - �������� (Windows)"
-	SET "CPDESC4= 4)  737 - �������� (DOS)              28)   1255 - ������ (Windows)"
-	SET "CPDESC5= 5)  775 - ������� (DOS)               29)   1256 - ������� (Windows)"
-	SET "CPDESC6= 6)  850 - ������ ���駞� (DOS)       30)   1257 - ������� (Windows)"
-	SET "CPDESC7= 7)  852 - �������� ���駞� (DOS)     31)   1258 - ���������� (Windows)"
-	SET "CPDESC8= 8)  855 - ��������� (DOS)             32)   Big5 - Big-5 (����������� ��� 950)"
-	SET "CPDESC9= 9)  857 - �������� (DOS)              33)   SJIS - SJIS (����������� ��� 932)"
-	SET "CPDESC10=10)  860 - ����������� (DOS)           34)  88591 - ��������-1 (������ �.�.)"
-	SET "CPDESC11=11)  861 - ��������� (DOS)             35)  88592 - ��������-2 (��������/��������� �.�.)"
-	SET "CPDESC12=12)  862 - ������ (DOS)               36)  88593 - ��������-3 (�櫠� �.�.)"
-	SET "CPDESC13=13)  863 - ������� �������� (DOS)      37)  88594 - ��������-4 (�樜�� �.�.)"
-	SET "CPDESC14=14)  864 - ������� (864)               38)  88595 - ���������"
-	SET "CPDESC15=15)  865 - ��������� (DOS)             39)  88596 - �������"
-	SET "CPDESC16=16)  866 - �੠�� (��������� DOS)      40)  88597 - ��������"
-	SET "CPDESC17=17)  869 - ����⨤� �������� (DOS)     41)  88598 - ������"
-	SET "CPDESC18=18)  932 - ���ठ�� (Shift-JIS)        42)  88599 - ��������-5 (��������)"
-	SET "CPDESC19=19)  936 - ���❠�� (PRC GBK)          43) 885910 - ��������-6 (���������)"
-	SET "CPDESC20=20)  949 - ����᫠�� (UHC)             44) 885911 - ��䢘�����"
-	SET "CPDESC21=21)  950 - ���❠�� (Big-5 - ����)   45) 885913 - ����������"
-	SET "CPDESC22=22)  448 - ALARABI (��坜� 448)        46) 885915 - ��������-9 (�����ਫ਼ ������ �.�.)"
-	SET "CPDESC23=23) 1250 - �������� ���駞� (Windows) 47)  UTF-8 - Unicode (65001)"
-	SET "CPDESC24=24) 1251 - ��������� (Windows)         48)   UTF8 - Unicode (����������� ��� 65001)"
-	SET "MSG_CPSEL_PROMPT=������ ������� (�.�. 26 ��� ��������): "
-	SET "MSG_PRESS_ANY_KEY=���㩫� ������㧦�� ��㡫�� ��� �� ���᚜�� ⤘� ������ ��� �� �婫�!"
-	SET "MSG_SUMMARY_TITLE=                          �礦��:"
-	SET "MSG_SUMMARY_BOTH=   �� �������� ArcGIS �� ������������ ��� �� shapefiles"
-	SET "MSG_SUMMARY_SINGLE= � �������� ArcGIS %%TARGET%% �� ������������ ��� �� shapefiles"
-	SET "MSG_SUMMARY_CODEPAGE=           ��� ��������垩� '%%CodePage%%' � ����������"
-	SET "MSG_CONFIRM_PROMPT=�⢜�� �� �����橜�� ��� ������� ���; (���/): "
-	SET "MSG_CANCEL=� ��������� ����韞�� ��� ��� ��㩫�."
-	SET "MSG_INVALID_CONFIRM=�� ⚡��� ��ᤫ���. �����ᩫ� ����."
-	SET "MSG_INVALID_APPSEL=�� ⚡��� �������. ����������."
-	SET "MSG_INVALID_CODEPAGE=�� ⚡��� ������� ���������囘�. ����⥫� ��� �� �婫�."
-	SET "MSG_SUCCESS_TITLE1=              � �������� ��� �☪ ��������垩��"
-	SET "MSG_SUCCESS_TITLE2=           ��� �� shapefiles �������韞�� �������!"
-	SET "MSG_CHANGE_CP_FOR_D========= ������ ��������垩�� ��� �� ArcGIS Desktop ========"
-	SET "MSG_CHANGE_CP_FOR_P=========== ������ ��������垩�� ��� �� ArcGIS Pro =========="
-	SET "MSG_KEEP_PROMPT=�⢜�� �� ������㩜�� �� ���៬�� �������;"
-	SET "MSG_KEEP_YES=���"
-	SET "MSG_KEEP_��="
-	SET "MSG_KEEP_CHOOSE=����⥫� 1 � 2: "
+	SET "MSG_TITLE1=   Αλλαγή προεπιλεγμένης κωδικοποίησης για τα Shapefiles"
+	SET "MSG_TITLE2=        για ArcGIS Desktop 10.x ή / και ArcGIS Pro"
+	SET "MSG_APPSEL_TITLE= Επιλέξτε εφαρμογή για την οποία θα αλλαχτεί η κωδικοποίηση"
+	SET "MSG_APPSEL_OPT=Όλα"
+	SET "MSG_APPSEL_EXIT=Έξοδος"
+	SET "MSG_APPSEL_INPUT=Πληκτρολογήστε 1, 2, 3 ή 4: "
+	SET "MSG_CPTITLE=          Εφαρμογές ArcGIS Desktop και ArcGIS Pro"
+	SET "MSG_CPTITLE1=                   Εφαρμογή ArcGIS %%TARGET%%"
+	SET "MSG_CPSEL_TITLE=Επιλέξτε κωδικοποίηση:"
+	SET "MSG_CPSEL_TITLE2=    Πληκτρολογήστε τον αριθμό επιλογής και πατήστε ENTER"
+	SET "CPDESC1= 1)  437 - Η.Π.Α. (DOS)                25)   1252 - Δυτικής Ευρώπης (Windows)"
+	SET "CPDESC2= 2)  708 - Αραβικά (ASMO 708)          26)   1253 - Ελληνικά (Windows ANSI)"
+	SET "CPDESC3= 3)  720 - Αραβικά (Διαφανή ASMO)      27)   1254 - Τουρκικά (Windows)"
+	SET "CPDESC4= 4)  737 - Ελληνικά (DOS)              28)   1255 - Εβραϊκά (Windows)"
+	SET "CPDESC5= 5)  775 - Βαλτικά (DOS)               29)   1256 - Αραβικά (Windows)"
+	SET "CPDESC6= 6)  850 - Δυτικής Ευρώπης (DOS)       30)   1257 - Βαλτικά (Windows)"
+	SET "CPDESC7= 7)  852 - Κεντρικής Ευρώπης (DOS)     31)   1258 - Βιετναμικά (Windows)"
+	SET "CPDESC8= 8)  855 - Κυριλλικά (DOS)             32)   Big5 - Big-5 (εναλλακτικό του 950)"
+	SET "CPDESC9= 9)  857 - Τουρκικά (DOS)              33)   SJIS - SJIS (εναλλακτικό του 932)"
+	SET "CPDESC10=10)  860 - Πορτογαλικά (DOS)           34)  88591 - Λατινικά-1 (Δυτική Ε.Ε.)"
+	SET "CPDESC11=11)  861 - Ισλανδικά (DOS)             35)  88592 - Λατινικά-2 (Κεντρική/Ανατολική Ε.Ε.)"
+	SET "CPDESC12=12)  862 - Εβραϊκά (DOS)               36)  88593 - Λατινικά-3 (Νότια Ε.Ε.)"
+	SET "CPDESC13=13)  863 - Γαλλικά Καναδικά (DOS)      37)  88594 - Λατινικά-4 (Βόρεια Ε.Ε.)"
+	SET "CPDESC14=14)  864 - Αραβικά (864)               38)  88595 - Κυριλλικά"
+	SET "CPDESC15=15)  865 - Νορβηγικά (DOS)             39)  88596 - Αραβικά"
+	SET "CPDESC16=16)  866 - Ρωσικά (Κυριλλικά DOS)      40)  88597 - Ελληνικά"
+	SET "CPDESC17=17)  869 - Μοντέρνα Ελληνικά (DOS)     41)  88598 - Εβραϊκά"
+	SET "CPDESC18=18)  932 - Ιαπωνικά (Shift-JIS)        42)  88599 - Λατινικά-5 (Τουρκικά)"
+	SET "CPDESC19=19)  936 - Κινέζικα (PRC GBK)          43) 885910 - Λατινικά-6 (Νορβηγικά)"
+	SET "CPDESC20=20)  949 - Κορεάτικα (UHC)             44) 885911 - Ταϊλανδικά"
+	SET "CPDESC21=21)  950 - Κινέζικα (Big-5 - Ταϊβάν)   45) 885913 - Λιθουανικά"
+	SET "CPDESC22=22)  448 - ALARABI (ορίζει 448)        46) 885915 - Λατινικά-9 (ενημέρωση Δυτικής Ε.Ε.)"
+	SET "CPDESC23=23) 1250 - Κεντρικής Ευρώπης (Windows) 47)  UTF-8 - Unicode (65001)"
+	SET "CPDESC24=24) 1251 - Κυριλλικά (Windows)         48)   UTF8 - Unicode (εναλλακτικό του 65001)"
+	SET "MSG_CPSEL_PROMPT=Αριθμός επιλογής (π.χ. 26 για Ελληνικά): "
+	SET "MSG_PRESS_ANY_KEY=Πατήστε οποιοδήποτε πλήκτρο για να εισάγετε έναν αριθμό από τη λίστα!"
+	SET "MSG_SUMMARY_TITLE=                          Σύνοψη:"
+	SET "MSG_SUMMARY_BOTH=   Οι εφαρμογές ArcGIS θα χρησιμοποιούν για τα shapefiles"
+	SET "MSG_SUMMARY_SINGLE= Η εφαρμογή ArcGIS %%TARGET%% θα χρησιμοποιεί για τα shapefiles"
+	SET "MSG_SUMMARY_CODEPAGE=           την κωδικοποίηση '%%CodePage%%' ως προεπιλογή"
+	SET "MSG_CONFIRM_PROMPT=Θέλετε να εφαρμόσετε την επιλογή σας; (Ναί/Όχι): "
+	SET "MSG_CANCEL=Η διαδικασία ακυρώθηκε από τον χρήστη."
+	SET "MSG_INVALID_CONFIRM=Μη έγκυρη απάντηση. Δοκιμάστε ξανά."
+	SET "MSG_INVALID_APPSEL=Μη έγκυρη επιλογή. Τερματισμός."
+	SET "MSG_INVALID_CODEPAGE=Μη έγκυρη επιλογή κωδικοσελίδας. Επιλέξτε από τη λίστα."
+	SET "MSG_SUCCESS_TITLE1=              Η εφαρμογή της νέας κωδικοποίησης"
+	SET "MSG_SUCCESS_TITLE2=           για τα shapefiles ολοκληρώθηκε επιτυχώς!"
+	SET "MSG_CHANGE_CP_FOR_D========= Αλλαγή κωδικοποίησης για το ArcGIS Desktop ========"
+	SET "MSG_CHANGE_CP_FOR_P=========== Αλλαγή κωδικοποίησης για το ArcGIS Pro =========="
+	SET "MSG_KEEP_PROMPT=Θέλετε να διατηρήσετε το παράθυρο ανοιχτό;"
+	SET "MSG_KEEP_YES=Ναί"
+	SET "MSG_KEEP_ΝΟ=Όχι"
+	SET "MSG_KEEP_CHOOSE=Επιλέξτε 1 ή 2: "
 ) ELSE (
 	SET "MSG_TITLE1=           Change default codepage of Shapefiles"
 	SET "MSG_TITLE2=        for ArcGIS Desktop 10.x or / and ArcGIS Pro"
@@ -130,7 +130,7 @@ IF "%LANGMODE%"=="GR" (
 	SET "MSG_CHANGE_CP_FOR_P=============== Change encoding for ArcGIS Pro =============="
 	SET "MSG_KEEP_PROMPT=Do you want to keep the window open?"
 	SET "MSG_KEEP_YES=Yes"
-	SET "MSG_KEEP_��=No"
+	SET "MSG_KEEP_ΝΟ=No"
 	SET "MSG_KEEP_CHOOSE=Choose 1 or 2: "
 )
 CLS
@@ -236,9 +236,9 @@ ECHO.
 SET /P Confirm="%MSG_CONFIRM_PROMPT%"
 IF /I "%Confirm%"=="Y" GOTO CONTINUE
 IF /I "%Confirm%"=="N" GOTO CANCEL
-IF /I "%Confirm%"=="�" GOTO CONTINUE
-IF /I "%Confirm%"=="�" GOTO CANCEL
-IF /I "%Confirm%"=="�" GOTO CANCEL
+IF /I "%Confirm%"=="Ν" GOTO CONTINUE
+IF /I "%Confirm%"=="Ο" GOTO CANCEL
+IF /I "%Confirm%"=="Ό" GOTO CANCEL
 ECHO %MSG_INVALID_CONFIRM%
 GOTO CONFIRM
 
@@ -281,7 +281,7 @@ ECHO %MSG_SUCCESS_TITLE2%
 ECHO ============================================================
 ECHO %MSG_KEEP_PROMPT%
 ECHO 1) %MSG_KEEP_YES%
-ECHO 2) %MSG_KEEP_��%
+ECHO 2) %MSG_KEEP_ΝΟ%
 ECHO.
 CHOICE /C 12 /N /M "%MSG_KEEP_CHOOSE%"
 IF ERRORLEVEL 2 EXIT
